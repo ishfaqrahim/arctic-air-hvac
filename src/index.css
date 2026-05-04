@@ -1,0 +1,281 @@
+/* RESET + BASE ONLY */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #030712;
+  color: #f1f5f9;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* REMOVE ALL ROOT CONSTRAINTS */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+:root {
+  --blue: #0f172a;
+  --dark: #020617;
+  --card: #111827;
+  --accent: #f97316;
+  --accent-hover: #fb923c;
+}
+
+/* GLOBAL */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: #f8fafc;
+}
+
+/* CONTAINER */
+/*.container {*/
+  /*max-width: 1200px;*/
+  /*margin: 0 auto;*/
+  /*padding: 0 20px;*/
+/*}*/
+
+/* HERO */
+.hero {
+  justify-content: center;
+  /*padding: 100px 0;*/
+  background: radial-gradient(circle at top, #1e293b, #020617);
+}
+
+.hero h1 {
+  font-size: 42px;
+  max-width: 700px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero p {
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
+.hero button {
+  margin-top: 25px;
+  background: var(--accent);
+  padding: 14px 28px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+}
+
+.hero button:hover {
+  background: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+/* TRUST BADGES */
+.trust {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* SERVICES */
+.services {
+  padding: 80px 0;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Poppins';
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 14px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+/* CTA */
+.cta-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #020617;
+}
+
+.cta-section h2 {
+  font-family: 'Poppins';
+}
+
+.cta-section button {
+  margin-top: 20px;
+  background: var(--accent);
+  padding: 14px 28px;
+  border-radius: 8px;
+  color: white;
+}
+
+/* CHATBOT */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbox {
+  width: 360px;
+  background: #020617;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.chatbox input,
+.chatbox select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #111827;
+  color: white;
+}
+
+.chat-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.chat-actions button {
+  background: var(--accent);
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .trust {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .chatbox {
+    width: 90%;
+  }
+}
+/* CONTACT */
+.contact-section {
+  padding: 80px 0;
+  background: #020617;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-family: 'Poppins';
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0.7;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+
+.contact-info {
+  background: #111827;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  opacity: 0.85;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #111827;
+  color: white;
+}
+
+.contact-form button {
+  background: #f97316;
+  padding: 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+}
+
+.contact-form button:hover {
+  background: #fb923c;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
