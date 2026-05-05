@@ -64,7 +64,6 @@ export default function Chatbot({ setOpenChat }: any) {
     const submitLead = async (finalData: any) => {
         setStatus("submitting");
         setError("");
-        
         try {
             const response = await fetch(
                 `https://api.airtable.com/v0/${import.meta.env.VITE_AIRTABLE_BASE_ID}/Table%201`,
